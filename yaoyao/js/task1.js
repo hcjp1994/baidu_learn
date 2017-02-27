@@ -13,6 +13,7 @@ window.onload=function () {
       span[0].innerHTML="";
     }
   }
+  // 验证输入长度为4-16位之间
   btn[1].onclick=function () {
     var reg=/\.{4,16}/
     if(!reg.test(password.value)){
