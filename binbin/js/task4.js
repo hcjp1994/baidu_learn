@@ -54,4 +54,11 @@ window.onload=function () {
     div.removeChild(div.lastChild);
   }
   //点击队列中的任何一个元素，此元素从队列中删除
+  div.addEventListener('click',function(ev){
+    var ev = ev || window.event;
+    var target = ev.target || ev.srcElement;
+    if(target.nodeName=="SPAN"){
+      target.remove();
+    }
+  })
 }
