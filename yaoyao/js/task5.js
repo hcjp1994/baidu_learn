@@ -54,6 +54,66 @@ var game= {
     else if(val=="TUN BAC"){
       this.turnBack(box);
     }
+    else if(val=="TRA LEF"){
+      if(left>0){
+        box.style.transition="left 1s";
+        box.style.left=left-123+"px";
+      }
+    }
+    else if(val=="TRA TOP"){
+      if(top>0){
+        box.style.transition="top 1s";
+        box.style.top=top-123+"px";
+      }
+    }
+    else if(val=="TRA RIG"){
+      if(left<610){
+        box.style.transition="left 1s";
+        box.style.left=left+123+"px";
+      }
+    }
+    else if(val=="TRA BOT"){
+      if(top<610){
+        box.style.transition="top 1s";
+        box.style.top=left+top+"px";
+      }
+    }
+    else if(val=="MOV LEF"){
+      if(left>0){
+        box.style.transition="left 1s,transform 1s";
+        box.style.left=left-123+"px";
+        box.style.transform="rotate(270deg)";
+        this.state=this.LEFT;
+        this.rn--;
+      }
+    }
+    else if(val=="MOV TOP"){
+      if(top>0){
+        box.style.transition="top 1s,transform 1s";
+        box.style.top=top-123+"px";
+        box.style.transform="rotate(0deg)";
+        this.state=0;
+        this.cn--;
+      }
+    }
+    else if(val=="MOV RIG"){
+      if(left<610){
+        box.style.transition="left 1s,transform 1s";
+        box.style.left=left+123+"px";
+        box.style.transform="rotate(90deg)";
+        this.state=this.RIGHT;
+        this.rn++;
+      }
+    }
+    else if(val=="MOV BOT"){
+      if(top<610){
+        box.style.transition="top 1s,transform 1s";
+        box.style.top=top+123+"px";
+        box.style.transform="rotate(180deg)";
+        this.state=this.UNDER;
+        this.cn++;
+      }
+    }
 
   },
   // TUN LEF：向左转（逆时针旋转90度）

@@ -1,0 +1,43 @@
+#gridPanel{
+  width: 610px;
+  height: 610px;
+  margin: 0 auto;
+  border: 1px solid #f53e43;
+  background-color: #bba3e4;
+  border-radius: 3px;
+  position: relative;
+}
+.grid{
+  width: 120px;
+  height: 120px;
+  border: 1px solid #aaee3e;
+  float: left;
+}
+#box{
+  width: 120px;
+  height: 90px;
+  border-top: 30px solid #aaffff;
+  background-color: #ee3e23;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+}
+#action{
+  width: 300px;
+  height: 30px;
+  margin: 50px 500px 20px;
+}
+input{
+  border-color: #aaffcc;
+  border-radius: 2px;
+  width: 200px;
+  height: 30px;
+}
+button{
+  border: 0;
+  background-color: #ee99ff;
+  width: 55px;
+  height: 35px;
+  margin-left: 20px;
+}
