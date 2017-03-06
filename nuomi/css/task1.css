@@ -3,7 +3,16 @@
   height: 400px;
   margin: 200px auto;
   position: relative;
-  background-image: url("../img/2.jpg");
+}
+
+#wrap .blur {
+  display: block;
+  width: 600px;
+  height: 400px;
+  position: absolute;
+}
+#wrap:hover .blur {
+  filter: blur(5px);
 }
 #caption{
   width: 450px;
@@ -11,11 +20,13 @@
   position: relative;
   margin: 0px auto;
 }
+
 #container{
   width: 450px;
   height: 310px;
   position: absolute;
   top:40px;
+  left: 68px;
 }
 #container::before{
   content: '';
@@ -44,9 +55,6 @@
   visibility: hidden;
   transition: all .8s;
   box-sizing: border-box;
-}
-#wrap:hover{
-  filter: blur(1px);
 }
 #wrap:hover #container{
   opacity: 1;
