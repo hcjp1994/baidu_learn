@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task9</title>
+  <style>
+    #wrap{
+      width:600px;
+      height: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      color:#333;
+    }
+    p{
+      width: 600px;
+      height: 0px;
+      border: 1px solid #ccc;
+      border-top: 0px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      /*display: none;*/
+      -webkit-transition:height 1s linear;
+    }
+
+    .control{display: none}
+    .control+label{
+      display: block;
+      width: 600px;
+      height: 30px;
+      border:1px solid #ccc;
+      border-radius: 5px ;
+      background-color: #eee;
+      line-height: 30px;
+      margin-top: 20px;
+    }
+    .control:checked+label ~p{
+      height: 180px;
+      overflow: visible;
+      /*display: block;*/
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="container">
+      <input type="radio" id="open" class="control" name="control">
+      <label for="open">第一章</label>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur doloremque dolores
+        dolorum ducimus, explicabo facere fugit incidunt laborum Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. At atque consequuntur dolores eius est laboriosam nesciunt perferendis
+        repellat, sit tenetur unde vel vitae voluptates? Blanditiis consequuntur minus modi nobis sit?
+        maiores maxime natus necessitatibus nulla odio quisquam rerum sint ut voluptas.
+      </p>
+    </div>
+    <div class="container">
+      <input type="radio" id="close" class="control" name="control">
+      <label for="close">第二章</label>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur doloremque dolores
+        dolorum ducimus, explicabo facere fugit incidunt laborum Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. At atque consequuntur dolores eius est laboriosam nesciunt perferendis
+        repellat, sit tenetur unde vel vitae voluptates? Blanditiis consequuntur minus modi nobis sit?
+        maiores maxime natus necessitatibus nulla odio quisquam rerum sint ut voluptas.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
