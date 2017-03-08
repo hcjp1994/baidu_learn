@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3饼状loading效果</title>
+  <style>
+    #d1{
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ff00ff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      margin: 200px auto;
+      position: relative;
+      animation: r1 2s linear infinite;
+    }
+    #d2{
+      width: 0;
+      height: 0;
+      border: 45px solid #ff33ff;
+      border-radius: 45px;
+      border-top-color:#ff88ff ;
+      border-left-color: #ff88ff;
+      position: absolute;
+      top:5px;
+      left: 5px;
+    }
+    #d3{
+      width: 0;
+      height: 0;
+      border: 45px solid #ff88ff;
+      border-radius: 45px;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      position: absolute;
+      top:5px;
+      left:5px;
+      animation: r3 2s linear infinite;
+    }
+    #d4{
+      width: 0;
+      height: 0;
+      border: 45px solid #ff33ff;
+      border-radius: 45px;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      position: absolute;
+      top:5px;
+      left:5px;
+      animation: r4 2s linear infinite;
+    }
+    @keyframes r1 {
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes r3 {
+      25% {
+        transform: rotate(180deg);
+      }
+      50% {
+        transform: rotate(180deg);
+        z-index: 2;
+      }
+      75% {
+        transform: rotate(360deg);
+        z-index: 2;
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes r4 {
+      25% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(180deg);
+        z-index: 1;
+      }
+      75% {
+        transform: rotate(180deg);
+        z-index: 1;
+      }
+      75.01% {
+        transform: rotate(180deg);
+        z-index: 2;
+      }
+      100% {
+        transform: rotate(360deg);
+        z-index: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="d1">
+  <div id="d2"></div>
+  <div id="d3"></div>
+  <div id="d4"></div>
+</div>
+</body>
+</html>
