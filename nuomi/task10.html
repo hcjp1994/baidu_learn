@@ -31,23 +31,14 @@
     }
   }
   btn[1].onclick=function () {
-    var reg2=/^(.*?)(\s?)\w{2}(\s?)$/g;
+    var reg2=/\b([a-zA-Z]+)\b\s+\b\1\b/g;
     if(reg2.test(inputs[1].value)){
       alert("有相邻的字符串");
     }
     else {
       alert("无相邻的字符串");
     }
-//    var arr=reg2.test(inputs[1].value);
-//    console.log(arr);
-//    if(arr!=null){
-//      for(var i=0;i<arr.length;i++){
-//        if(arr[i]==arr[i+1]){
-//          alert("有相邻的字符串");
-//        }
-//        alert("无相邻的字符串");
-//      }
-//    }
+
   }
 </script>
 </body>
