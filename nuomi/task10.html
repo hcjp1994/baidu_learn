@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task10</title>
+  <style>
+    div{
+      margin:30px 400px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text" placeholder="请输入手机号">
+  <button>确定</button>
+</div>
+<div>
+  <input type="text" placeholder="请输入介绍">
+  <button>确定</button>
+</div>
+<script>
+  var inputs=document.getElementsByTagName("input");
+  var btn=document.getElementsByTagName("button");
+  btn[0].onclick=function () {
+    var reg1=/1[34578]\d{9}/;
+    if(reg1.test(inputs[0].value)){
+      alert("输入正确!");
+    }
+    else{
+      alert("输入错误！");
+    }
+  }
+  btn[1].onclick=function () {
+    var reg2=/^(.*?)(\s?)\w{2}(\s?)$/g;
+    if(reg2.test(inputs[1].value)){
+      alert("有相邻的字符串");
+    }
+    else {
+      alert("无相邻的字符串");
+    }
+//    var arr=reg2.test(inputs[1].value);
+//    console.log(arr);
+//    if(arr!=null){
+//      for(var i=0;i<arr.length;i++){
+//        if(arr[i]==arr[i+1]){
+//          alert("有相邻的字符串");
+//        }
+//        alert("无相邻的字符串");
+//      }
+//    }
+  }
+</script>
+</body>
+</html>
