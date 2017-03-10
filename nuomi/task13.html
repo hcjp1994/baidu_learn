@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3d轮播图</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #stage{
+      width: 950px;
+      height: 500px;
+      padding: 30px;
+      position: relative;
+      perspective: 800px;
+    }
+    #container{
+      width: 300px;
+      transform-style: preserve-3d;
+      list-style: none;
+      margin-top: 200px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      top:250px;
+      transition: transform 1s;
+    }
+    #container li{
+      display: block;
+      width: 200px;
+      position: absolute;
+    }
+    #container li img{
+      width:200px;
+    }
+    #container li:nth-child(1){transform: rotateY(0deg) translateZ(193px);}
+    #container li:nth-child(2){transform: rotateY(60deg) translateZ(193px);}
+    #container li:nth-child(3){transform: rotateY(120deg) translateZ(193px);}
+    #container li:nth-child(4){transform: rotateY(180deg) translateZ(193px);}
+    #container li:nth-child(5){transform: rotateY(240deg) translateZ(193px);}
+    #container li:nth-child(6){transform: rotateY(300deg) translateZ(193px);}
+
+  </style>
+  <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+  <div id="stage">
+    <ul id="container">
+      <li><img src="img/3.jpg" alt=""></li>
+      <li><img src="img/5.jpg" alt=""></li>
+      <li><img src="img/6.jpg" alt=""></li>
+      <li><img src="img/7.jpg" alt=""></li>
+      <li><img src="img/8.jpg" alt=""></li>
+      <li><img src="img/9.jpg" alt=""></li>
+    </ul>
+  </div>
+  <script>
+//    var r = 100 / Math.tan(30 / 180 * Math.PI);
+// console.log(r);
+    var transform = function (element, value, key)
+    {
+      key = key || "Transform";
+      ["Moz", "O", "Ms", "Webkit", ""].forEach(function (prefix)
+      {
+        element.style[prefix + key] = value;
+      });
+
+      return element;
+    }
+
+
+    $(function ()
+    {
+      var deg = -60 , i = 1;
+      $("#container").click(function ()
+      {
+        transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
+      });
+    });
+  </script>
+</body>
+</html>
