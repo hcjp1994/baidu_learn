@@ -56,28 +56,15 @@
     </ul>
   </div>
   <script>
-//    var r = 100 / Math.tan(30 / 180 * Math.PI);
-// console.log(r);
-    var transform = function (element, value, key)
-    {
-      key = key || "Transform";
-      ["Moz", "O", "Ms", "Webkit", ""].forEach(function (prefix)
-      {
-        element.style[prefix + key] = value;
-      });
-
-      return element;
-    }
-
-
-    $(function ()
-    {
-      var deg = -60 , i = 1;
-      $("#container").click(function ()
-      {
-        transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
-      });
+$(function () {
+  var i=1;
+  var deg=-60;
+  $("#stage").click(function () {
+    $("#container").css({
+      'transform':'rotateY('+(deg*i++)+'deg)'
     });
+  })
+})
   </script>
 </body>
 </html>
